@@ -7,8 +7,9 @@ export function getTodaysDate () {
 
   var date = new Date();
 
-  var day = date.getDay();
-  var month = monthNames[date.getMonth() - 1];
+  var day = date.getDate();
+  console.log(day);
+  var month = monthNames[date.getMonth()];
   var year = date.getFullYear();
 
   return day + " " + month + " " + year;
