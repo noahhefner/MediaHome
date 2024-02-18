@@ -4,16 +4,16 @@
   },
   "tiles": [
     {
-      "name": "Netflix",
+      "service": "Netflix",
       "url": "www.netflix.com",
       "image": "netflix_logo.png",
-      "key": "n"
+      "keybind": "n"
     },
     {
-      "name": "Floatplane",
+      "service": "Floatplane",
       "url": "www.floatplane.com",
       "image": "floatplane_logo.png",
-      "key": "f"
+      "keybind": "f"
     }
   ]
 }

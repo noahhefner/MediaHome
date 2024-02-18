@@ -3,6 +3,11 @@
 import SingleTile from '@/components/SingleTile.vue';
 
 export default {
+  data() {
+    return {
+      tiles: null
+    };
+  },
   components: {
     SingleTile
   },
@@ -14,6 +19,7 @@ export default {
       try {
         const response = await fetch('/src/assets/config.json');
         const data = await response.json();
+        this.tiles = data.tiles;
         document.documentElement.style.setProperty('--columns', data.appearance.columns);
       } catch (error) {
         console.log(error);
@@ -26,7 +32,13 @@ export default {
 
 <template>
   <div class='tiles-container'>
-    <SingleTile/>
+    <SingleTile 
+      v-for="(tile, index) in tiles" 
+      :service="tile.service" 
+      :url="tile.url" 
+      :image="tile.image" 
+      :keybind="tile.keybind"
+    />
   </div>
 </template>
 
