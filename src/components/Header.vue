@@ -1,8 +1,6 @@
 <script setup>
   import { getTodaysDate } from '../utils/date.js';
-  import { getConfig } from '../utils/config.js';
   var todaysDate = getTodaysDate();
-  console.log(getConfig());
 </script>
 
 <template>
