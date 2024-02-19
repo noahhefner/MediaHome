@@ -1,5 +1,13 @@
 document.addEventListener('keydown', function(event) {
-  // Log the key code and key name when a key is pressed
-  console.log('Key code:', event.keyCode);
-  console.log('Key:', event.key);
-});
+
+  const response = await fetch('/src/assets/config.json');
+  const data = await response.json();
+
+  for (var i = 0; i < data.tiles.length; i++) {
+    var keybind = data.tiles[i].keybind;
+    if event.key == keybind {
+      window.location.href = data.tiles[i].url;
+    }
+  }
+
+);

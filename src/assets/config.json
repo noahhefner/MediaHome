@@ -1,18 +1,18 @@
 {
   "appearance": {
-    "columns": 3
+    "columns": 4
   },
   "tiles": [
     {
       "service": "Netflix",
-      "url": "www.netflix.com",
-      "image": "netflix_logo.png",
+      "url": "https://www.netflix.com",
+      "image": "netflix-logo.png",
       "keybind": "n"
     },
     {
       "service": "Floatplane",
-      "url": "www.floatplane.com",
-      "image": "floatplane_logo.png",
+      "url": "https://www.floatplane.com",
+      "image": "floatplane-logo.jpg",
       "keybind": "f"
     }
   ]
