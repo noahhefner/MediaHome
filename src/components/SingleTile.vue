@@ -19,23 +19,30 @@ export default {
   <div class="tile">
     <a :href="url">
       <img :src="imagePath" :alt="service">
-      <div class="keybind-container">
-        <p>{{ keybind }}</p>
-      </div>
     </a>
+    <div class="keybind-container">
+      <p>{{ keybind }}</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
 
-img {
-  max-width: 100%;
-  max-height: 100%;
+.tile img {
+  display: block;
+  width: 100%;
 }
 
 .tile {
+  border: 2px solid #a5a5a5;
   position: relative;
-  display: inline-block;
+  border-radius: 12px;
+  display: flex;
+  height: 150px;
+  width: 100%;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
   background-color: green;
 }
 
@@ -45,16 +52,17 @@ img {
   right: 0;
   width: 2rem;
   height: 2rem;
-  background-color: pink;
+  background-color: #161616;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 100%;
+  border-radius: 12px;
+  border: 2px solid #a5a5a5;
 }
 
 .keybind-container p {
   margin: auto;
-  color: black;
+  color: #a5a5a5;
 }
 
 </style>

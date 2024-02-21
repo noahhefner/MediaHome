@@ -25,6 +25,8 @@ export default {
         this.tiles = data.tiles;
         // Set columns
         document.documentElement.style.setProperty('--columns', data.appearance.columns);
+        console.log(Math.round(data.tiles.length / data.appearance.columns));
+        document.documentElement.style.setProperty('--rows', Math.round(data.tiles.length / data.appearance.columns));
       } catch (error) {
         console.log(error);
       }
@@ -60,10 +62,9 @@ export default {
 
 .tiles-container {
   display: grid;
-  height: 500px;
-  background-color: red;
+  gap: 2em;
   grid-template-columns: repeat(var(--columns), 1fr);
-  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-rows: repeat(var(--rows), 1fr);
 }
 
 .tiles-container:focus {
