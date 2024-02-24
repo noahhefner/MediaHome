@@ -1,29 +1,20 @@
 # MediaHome
 
-This template should help get you started developing with Vue 3 in Vite.
+MediaHome is a self-hostable homepage for all your media services. MediaHome is not meant as a competitor to homelab dashboards like [Homer](https://github.com/bastienwirtz/homer) or [Homepage](https://github.com/gethomepage/homepage). Rather, it is meant to be accessed from a dedicated HTPC to provide a fast and simple way to access content.
 
-## Recommended IDE Setup
+![screenshot](./screenshot.png)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Features
 
-## Customize configuration
+- Configurable with `json`
+- Keyboard shortcuts to launch into services
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Roadmap
 
-## Project Setup
+- [ ] Dockerize the application with volume support for configuration files
+- [ ] Additional customization options (colors, toggle keyboard shortcut visibility, etc.)
 
-```sh
-npm install
-```
+## Development
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+1. Install `node.js` and `npm`.
+2. Run `make dev`.
