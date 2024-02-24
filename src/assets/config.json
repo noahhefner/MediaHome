@@ -38,6 +38,13 @@
       "url": "https://www.hulu.com",
       "image": "hulu-logo.jpg",
       "keybind": "h"
+    },
+    {
+      "service": "Spotify",
+      "url": "https://www.spotify.com",
+      "image": "spotify-logo.jpg",
+      "keybind": "s"
     }
+
   ]
 }

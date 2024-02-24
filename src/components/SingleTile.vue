@@ -10,27 +10,31 @@ export default {
   computed: {
     imagePath() {
       return `/src/assets/images/${this.image}`;
+    },
+    keybindUpper() {
+      return this.keybind.toUpperCase();
     }
   }
 }
 </script>
 
 <template>
-  <div class="tile">
-    <a :href="url">
+  <a :href="url">
+    <div class="tile">
       <img :src="imagePath" :alt="service">
-    </a>
-    <div class="keybind-container">
-      <p>{{ keybind }}</p>
+      <div class="keybind-container">
+        <p>{{ keybindUpper }}</p>
+      </div>
     </div>
-  </div>
+  </a>
 </template>
 
 <style scoped>
 
 .tile img {
-  display: block;
+  object-fit: fill;
   width: 100%;
+  height: 100%;
 }
 
 .tile {
@@ -39,11 +43,10 @@ export default {
   border-radius: 12px;
   display: flex;
   height: 150px;
-  width: 100%;
+  width: 300px;
   overflow: hidden;
   align-items: center;
   justify-content: center;
-  background-color: green;
 }
 
 .keybind-container {
@@ -56,13 +59,14 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 12px;
+  border-radius: 100%;
   border: 2px solid #a5a5a5;
 }
 
 .keybind-container p {
   margin: auto;
   color: #a5a5a5;
+  font-family: Consolas, monospace;
 }
 
 </style>

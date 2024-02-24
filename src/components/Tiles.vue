@@ -65,6 +65,8 @@ export default {
   gap: 2em;
   grid-template-columns: repeat(var(--columns), 1fr);
   grid-template-rows: repeat(var(--rows), 1fr);
+  margin: 0;
+  padding: 2rem;
 }
 
 .tiles-container:focus {
