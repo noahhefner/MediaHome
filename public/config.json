@@ -33,7 +33,7 @@
     },
     {
       "service": "Jellyfin",
-      "url": "https://www.jellyfin.local.partee-lab.com",
+      "url": "https://jellyfin.local.partee-lab.com",
       "image": "jellyfin-logo.png",
       "keybind": "j",
       "target": "_blank"
@@ -54,7 +54,7 @@
     },
     {
       "service": "Navidrome",
-      "url": "https://www.navidrome.local.partee-lab.com",
+      "url": "https://navidrome.local.partee-lab.com",
       "image": "navidrome-logo.png",
       "keybind": "v",
       "target": "_blank"
