@@ -20,7 +20,7 @@ export default {
     async fetchConfig() {
       try {
         // Fetch config file
-        const response = await fetch('/config.json');
+        const response = await fetch('/config/config.json');
         const data = await response.json();
         this.tiles = data.tiles;
         // Set columns

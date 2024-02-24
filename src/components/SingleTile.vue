@@ -10,7 +10,7 @@ export default {
   },
   computed: {
     imagePath() {
-      return `/images/${this.image}`;
+      return `/config/images/${this.image}`;
     },
     keybindUpper() {
       return this.keybind.toUpperCase();

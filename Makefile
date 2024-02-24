@@ -1,22 +1,27 @@
-REPO ?= noahhefner/MediaHome
+REPO ?= noahhefner/media-home
 GITSHA = $(shell git rev-parse --short HEAD)
 TAG_COMMIT = $(REPO):$(GITSHA)
 TAG_LATEST=$(REPO):latest
 
 all:dev
 
-.PHONY:build
-build:
-	docker build -t $(TAG_LATEST)
-
 .PHONY:dev
 dev:
-	npm install
 	npm run dev
+
+.PHONY:build
+build:
+	docker build --no-cache -t $(TAG_LATEST) .
 
 .PHONY:run
 run:
 	docker run --rm -p 8080:80 $(TAG_LATEST)
+
+.PHONY:clean
+clean:
+	@rm -rf dist
+	@echo "Deleting Docker images with tag $(TAG_LATEST)"
+	@docker images -q $(TAG_LATEST) | xargs -r docker rmi -f
 
 .PHONY:publish
 publish:

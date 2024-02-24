@@ -1,0 +1,11 @@
+---
+version: "3"
+services:
+  homer:
+    image: noahhefner/media-home:latest
+    container_name: media-home
+    volumes:
+      - /path/to/config:/usr/share/nginx/html/config
+    ports:
+      - 8080:80
+    user: 1000:1000
