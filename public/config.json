@@ -7,43 +7,57 @@
       "service": "Netflix",
       "url": "https://www.netflix.com",
       "image": "netflix-logo.png",
-      "keybind": "n"
+      "keybind": "n",
+      "target": "_blank"
     },
     {
       "service": "Floatplane",
       "url": "https://www.floatplane.com",
       "image": "floatplane-logo.jpg",
-      "keybind": "f"
+      "keybind": "f",
+      "target": "_blank"
     },
     {
       "service": "Youtube",
       "url": "https://www.youtube.com",
       "image": "youtube-logo.jpg",
-      "keybind": "y"
+      "keybind": "y",
+      "target": "_blank"
     },
     {
       "service": "Disney",
       "url": "https://www.disneyplus.com",
       "image": "disney-logo.jpeg",
-      "keybind": "d"
+      "keybind": "d",
+      "target": "_blank"
     },
     {
       "service": "Jellyfin",
       "url": "https://www.jellyfin.local.partee-lab.com",
       "image": "jellyfin-logo.png",
-      "keybind": "j"
+      "keybind": "j",
+      "target": "_blank"
     },
     {
       "service": "Hulu",
       "url": "https://www.hulu.com",
       "image": "hulu-logo.jpg",
-      "keybind": "h"
+      "keybind": "h",
+      "target": "_blank"
     },
     {
       "service": "Spotify",
       "url": "https://www.spotify.com",
       "image": "spotify-logo.jpg",
-      "keybind": "s"
+      "keybind": "s",
+      "target": "_blank"
+    },
+    {
+      "service": "Navidrome",
+      "url": "https://www.navidrome.local.partee-lab.com",
+      "image": "navidrome-logo.png",
+      "keybind": "v",
+      "target": "_blank"
     }
 
   ]

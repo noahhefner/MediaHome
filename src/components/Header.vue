@@ -1,11 +1,36 @@
-<script setup>
-  import { getTodaysDate } from '../utils/date.js';
-  var todaysDate = getTodaysDate();
+<script>
+  import { getTodaysDate } from '@/utils/date';
+
+  const timezone = 'America/New_York';
+
+  export default {
+    data() {
+      return {
+        currentTime: '',
+        todaysDate: ''
+      };
+    },
+    mounted() {
+      this.updateTime();
+      this.timer = setInterval(this.updateTime, 1000);
+      this.todaysDate = getTodaysDate();
+    },
+    methods: {
+      updateTime() {
+        const now = new Date();
+        this.currentTime = now.toLocaleTimeString('en-US', { timeZone: timezone, hour: 'numeric', minute: 'numeric' });
+      }
+    },
+    beforeDestroy() {
+      clearInterval(this.timer);
+    }
+  }
+  
 </script>
 
 <template>
   <div class='app-header'>
-    <p>{{ todaysDate }}</p>
+    <p>{{ this.currentTime }} | {{ this.todaysDate }}</p>
   </div>
 </template>
 

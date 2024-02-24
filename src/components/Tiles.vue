@@ -20,7 +20,7 @@ export default {
     async fetchConfig() {
       try {
         // Fetch config file
-        const response = await fetch('/src/assets/config.json');
+        const response = await fetch('/config.json');
         const data = await response.json();
         this.tiles = data.tiles;
         // Set columns
@@ -36,7 +36,7 @@ export default {
       for (var i = 0; i < this.tiles.length; i++) {
          var keybind = this.tiles[i].keybind;
           if (event.key == keybind) {
-            window.location.href = this.tiles[i].url;
+            window.open(this.tiles[i].url, this.tiles[i].target);
           }
       }
     }
@@ -48,13 +48,14 @@ export default {
 
 <template>
   <div ref="tilesContainer" class='tiles-container' tabindex="0">
-    <SingleTile 
-      v-for="(tile, index) in tiles" 
-      :service="tile.service" 
-      :url="tile.url" 
-      :image="tile.image" 
-      :keybind="tile.keybind"
-    />
+    <div class="tile-wrapper-outer" v-for="(tile, index) in tiles">
+      <SingleTile 
+        :service="tile.service" 
+        :url="tile.url" 
+        :image="tile.image" 
+        :keybind="tile.keybind"
+        :target="tile.target"/>
+    </div>
   </div>
 </template>
 
@@ -62,7 +63,6 @@ export default {
 
 .tiles-container {
   display: grid;
-  gap: 2em;
   grid-template-columns: repeat(var(--columns), 1fr);
   grid-template-rows: repeat(var(--rows), 1fr);
   margin: 0;
@@ -71,6 +71,17 @@ export default {
 
 .tiles-container:focus {
   outline: none;
+}
+
+.tile-wrapper-outer {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
 }
 
 </style>
