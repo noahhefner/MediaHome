@@ -13,7 +13,7 @@ MediaHome is a self-hostable homepage for all your media services. MediaHome is 
 
 Docker compose:
 
-```
+```yml
 ---
 version: "3"
 services:
@@ -39,7 +39,7 @@ config/
 
 Example `config.json`:
 
-```
+```json
 {
   "appearance": {
     "columns": 4
