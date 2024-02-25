@@ -11,17 +11,10 @@
       "target": "_blank"
     },
     {
-      "service": "Floatplane",
-      "url": "https://www.floatplane.com",
-      "image": "floatplane-logo.jpg",
-      "keybind": "f",
-      "target": "_blank"
-    },
-    {
-      "service": "Youtube",
-      "url": "https://www.youtube.com",
-      "image": "youtube-logo.jpg",
-      "keybind": "y",
+      "service": "Hulu",
+      "url": "https://www.hulu.com",
+      "image": "hulu-logo.jpg",
+      "keybind": "h",
       "target": "_blank"
     },
     {
@@ -32,17 +25,10 @@
       "target": "_blank"
     },
     {
-      "service": "Jellyfin",
-      "url": "https://jellyfin.local.partee-lab.com",
-      "image": "jellyfin-logo.png",
-      "keybind": "j",
-      "target": "_blank"
-    },
-    {
-      "service": "Hulu",
-      "url": "https://www.hulu.com",
-      "image": "hulu-logo.jpg",
-      "keybind": "h",
+      "service": "Youtube",
+      "url": "https://www.youtube.com",
+      "image": "youtube-logo.jpg",
+      "keybind": "y",
       "target": "_blank"
     },
     {
@@ -51,14 +37,6 @@
       "image": "spotify-logo.jpg",
       "keybind": "s",
       "target": "_blank"
-    },
-    {
-      "service": "Navidrome",
-      "url": "https://navidrome.local.partee-lab.com",
-      "image": "navidrome-logo.png",
-      "keybind": "v",
-      "target": "_blank"
     }
-
   ]
 }
