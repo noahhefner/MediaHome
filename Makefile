@@ -1,4 +1,4 @@
-REPO ?= nhefner/media-home
+REPO ?= nhefner/mediahome
 GITSHA = $(shell git rev-parse --short HEAD)
 TAG_COMMIT = $(REPO):$(GITSHA)
 TAG_LATEST=$(REPO):latest
