@@ -42,7 +42,15 @@ Example `config.json`:
 ```json
 {
   "appearance": {
-    "columns": 4
+    "columns": 4,
+    "hideKeybind": false,
+    "colors": {
+      "backgroundColor": "#161616",
+      "textColor": "#a5a5a5",
+      "borderColor": "#a5a5a5",
+      "hoverColor": "#ffffff",
+      "keybindColor": "#161616"
+    }
   },
   "tiles": [
     {
@@ -50,39 +58,52 @@ Example `config.json`:
       "url": "https://www.netflix.com",
       "image": "netflix-logo.png",
       "keybind": "n",
-      "target": "_blank"
+      "target": "_blank",
+      "keybindHidden": false
     },
     {
       "service": "Hulu",
       "url": "https://www.hulu.com",
       "image": "hulu-logo.jpg",
       "keybind": "h",
-      "target": "_blank"
+      "target": "_blank",
+      "keybindHidden": false
     },
     {
       "service": "Disney",
       "url": "https://www.disneyplus.com",
       "image": "disney-logo.jpeg",
       "keybind": "d",
-      "target": "_blank"
+      "target": "_blank",
+      "keybindHidden": false
     },
     {
       "service": "Youtube",
       "url": "https://www.youtube.com",
       "image": "youtube-logo.jpg",
       "keybind": "y",
-      "target": "_blank"
+      "target": "_blank",
+      "keybindHidden": false
     },
     {
       "service": "Spotify",
       "url": "https://www.spotify.com",
       "image": "spotify-logo.jpg",
       "keybind": "s",
-      "target": "_blank"
+      "target": "_blank",
+      "keybindHidden": false
     }
   ]
 }
 ```
+
+Service configuration options:
+
+- `url`: The URL to open when the tile is clicked / the hotkey is pressed.
+- `image`: The image to display for the service tile.
+- `keybind`: Hotkey that will instantly open the service.
+- `target`: Set where the page should be opened (new tab, current tab, etc.)
+- `keybindHidden`: Toggle visibility for the hotkey indicator for that service. Set to `true` to hide the hotkey indicator. 
 
 ## Roadmap
 

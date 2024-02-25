@@ -1,6 +1,7 @@
 <script>
 
 import SingleTile from '@/components/SingleTile.vue';
+import { loadConfig } from '@/utils/config'; 
 
 export default {
   data() {
@@ -14,25 +15,17 @@ export default {
   mounted() {
     this.fetchConfig();
     this.$refs.tilesContainer.addEventListener('keydown', this.handleKeyPress);
+    // Foxus the tiles container so that keypresses will be caught
     this.$refs.tilesContainer.focus();
   },
   methods: {
     async fetchConfig() {
-      try {
-        // Fetch config file
-        const response = await fetch('/config/config.json');
-        const data = await response.json();
-        this.tiles = data.tiles;
-        // Set columns
-        document.documentElement.style.setProperty('--columns', data.appearance.columns);
-        console.log(Math.round(data.tiles.length / data.appearance.columns));
-        document.documentElement.style.setProperty('--rows', Math.round(data.tiles.length / data.appearance.columns));
-      } catch (error) {
-        console.log(error);
-      }
+      // Load color values as css variables and get tile configuration
+      this.tiles = await loadConfig();
+      console.log(this.tiles);
     },
     handleKeyPress(event) {
-      // Setup keybindings from config file
+      // Listen for hotkeys from config file
       for (var i = 0; i < this.tiles.length; i++) {
          var keybind = this.tiles[i].keybind;
           if (event.key == keybind) {
@@ -54,7 +47,8 @@ export default {
         :url="tile.url" 
         :image="tile.image" 
         :keybind="tile.keybind"
-        :target="tile.target"/>
+        :target="tile.target"
+        :keybindHidden="tile.keybindHidden"/>
     </div>
   </div>
 </template>

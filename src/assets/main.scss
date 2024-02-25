@@ -1,7 +1,7 @@
 @import './base.scss';
 
 #app {
-  color: white;
+  color: var(--text-color);
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;

@@ -6,7 +6,8 @@ export default {
     url: null,
     image: null,
     keybind: null,
-    target: null
+    target: null,
+    keybindHidden: null
   },
   computed: {
     imagePath() {
@@ -24,9 +25,9 @@ export default {
     <a :href="this.url" :target="this.target">
       <div class="tile">
         <div class="tile-img-wrapper">
-          <img :src="imagePath" :alt="service">
+          <img :src="this.imagePath" :alt="this.service">
         </div>
-        <div class="keybind-container">
+        <div v-if="!this.keybindHidden" class="keybind-container">
           <p>{{ keybindUpper }}</p>
         </div>
       </div>
@@ -62,17 +63,17 @@ export default {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
-  border: 2px solid #a5a5a5;
+  border: 2px solid var(--border-color);
 }
 
 .tile:hover .tile-img-wrapper {
-  border: 2px solid white;
+  border: 2px solid var(--hover-color);
   transform: scale(1.03);
   transition: border, transform 0.2s ease;
 }
 
 .tile:not(:hover) .tile-img-wrapper {
-  border: 2px solid #a5a5a5;
+  border: 2px solid var(--border-color);
   transform: scale(1);
   transition: border, transform 0.2s ease;
 }
@@ -100,18 +101,18 @@ export default {
   left: 0;
   width: 2rem;
   height: 2rem;
-  background-color: #161616;
+  background-color: var(--keybind-color);
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  border: 2px solid #a5a5a5;
+  border: 2px solid var(--border-color);
   transform: translate(-50%, -50%);
 }
 
 .keybind-container p {
   margin: auto;
-  color: #a5a5a5;
+  color: var(--text-color);
   font-family: Consolas, monospace;
 }
 
