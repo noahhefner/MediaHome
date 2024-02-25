@@ -1,4 +1,4 @@
-REPO ?= noahhefner/media-home
+REPO ?= nhefner/media-home
 GITSHA = $(shell git rev-parse --short HEAD)
 TAG_COMMIT = $(REPO):$(GITSHA)
 TAG_LATEST=$(REPO):latest
@@ -26,5 +26,5 @@ clean:
 .PHONY:publish
 publish:
 	docker push $(TAG_LATEST)
-	@docker tag $(TAG_LATEST)$(TAG_COMMIT)
+	@docker tag $(TAG_LATEST) $(TAG_COMMIT)
 	docker push $(TAG_COMMIT)
