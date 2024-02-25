@@ -15,7 +15,7 @@ build:
 
 .PHONY:run
 run:
-	docker run --rm -p 8081:8080 $(TAG_LATEST)
+	docker run --rm -p 8080:80 $(TAG_LATEST)
 
 .PHONY:clean
 clean:
