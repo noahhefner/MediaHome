@@ -1,7 +1,7 @@
 ---
 version: "3"
 services:
-  homer:
+  mediahome:
     image: noahhefner/media-home:latest
     container_name: media-home
     volumes:
